@@ -1,0 +1,7 @@
+[package]
+name = "broker-resource"
+version = "0.0.1"
+authors = ["Chris Brown <xoebus@xoeb.us>"]
+
+[dependencies]
+rustc-serialize = "0.3"
