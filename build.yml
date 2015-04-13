@@ -1,0 +1,9 @@
+---
+platform: linux
+image: docker:///schickling/rust
+
+inputs:
+  - name: broker-resource
+
+run:
+  path: broker-resource/ci/test.sh
