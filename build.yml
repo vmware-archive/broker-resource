@@ -6,4 +6,4 @@ inputs:
   - name: broker-resource
 
 run:
-  path: broker-resource/ci/test.sh
+  path: broker-resource/scripts/ci

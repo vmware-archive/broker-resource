@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+not_installed() {
+  ! command -v $1 > /dev/null 2>&1
+}
+
+broker_resource_dir=$(realpath $(dirname $(dirname $0)))
+
+if not_installed cargo; then
+  echo "# rust is not installed! run the following command:"
+  echo "    curl -sSf https://static.rust-lang.org/rustup.sh | sh"
+  exit 1
+fi
+
+cd $broker_resource_dir
+cargo test
